@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Betania+Patmos&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div class="content-wrapper">
+        <header>
+            <h1>Fortune Cookie</h1>
+        </header>
+        
+        <main>
+            <div id="quote-box">
+                <p id="phrase-display">"Crack open a cookie to reveal your destiny..."</p>
+            </div>
+            
+            <button id="generate-btn">Crack Cookie!</button>
+        </main>
+        
+        <footer>
+            <p>By: Cloud Que</p>
+        </footer>
+    </div>
+
+    <script>
+        const fortunes = [
+            "A thrilling time is in your immediate future.",
+            "Your talents will be recognized and suitably rewarded.",
+            "The journey of a thousand miles begins with a single step.",
+            "A fresh start will put you on your way.",
+            "Patience is a virtue that will carry you far.",
+            "You will conquer obstacles to achieve success.",
+            "Someone is looking up to you. Don't let them down.",
+            "Adventure can be real happiness."
+        ];
+
+        const phraseDisplay = document.getElementById('phrase-display');
+        const generateBtn = document.getElementById('generate-btn');
+
+
+        function displayQuote() {
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+            phraseDisplay.textContent = fortunes[randomIndex];
+
+        }
+
+        generateBtn.addEventListener('click', displayQuote);
+
+        displayQuote();
+    </script>
+</body>
+</html>

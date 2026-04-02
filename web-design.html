@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Projects | Cloud Que</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 专门为这个列表页增加的额外样式 */
+        .page-container {
+            padding-top: 100px; /* 给顶部导航留出空间 */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-list {
+            width: 100%;
+            max-width: 800px; /* 控制列表宽度，显得精致 */
+            margin-top: 60px;
+        }
+
+        .project-item {
+            border-bottom: 1px solid #222; /* 极简分割线 */
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateX(10px); /* 鼠标悬停时整个项目微微向右移 */
+        }
+
+        .project-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .project-info p {
+            margin: 0;
+            color: var(--text-muted); /* 使用了 style.css 里的变量 */
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .project-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid #444;
+            padding: 10px 24px;
+            border-radius: 30px; /* 圆角按钮，柔和自然 */
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav-centered" style="position: absolute; top: 50px; width: 100%; display: flex; justify-content: center;">
+        <a href="index.html">Back to Home</a>
+    </nav>
+
+    <div class="page-container">
+        <div class="hero-center-content" style="margin-top: 50px;">
+            <h1 style="font-size: 3rem;">Web Design</h1>
+            <p>UI/UX & Front-End Development</p>
+        </div>
+
+        <div class="project-list">
+            
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>Game Introduction Page</h2>
+                    <p>A responsive, single-page promotional website introducing the story and characters of the indie horror game <em>Fran Bow</em></p>
+                </div>
+                <a href="./project1/index.html" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>Personal Page Layout</h2>
+                    <p>HTML & CSS structural design exploration.</p>
+                </div>
+                <a href="./Cloud's235Page/" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>Interactive Game Interface</h2>
+                    <p>Web-based interface design for a game concept.</p>
+                </div>
+                <a href="./game/index.html" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>Tetris CSS Grid</h2>
+                    <p>Advanced layout techniques using CSS Grid.</p>
+                </div>
+                <a href="./tetris-grid-finished/tetris-grid.html" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>Random Phrases Generator</h2>
+                    <p>JavaScript logic and DOM manipulation.</p>
+                </div>
+                <a href="./RandomPhrases/random-phrases.html" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            </div>
+    </div>
+
+</body>
+</html>

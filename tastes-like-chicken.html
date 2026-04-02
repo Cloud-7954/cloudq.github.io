@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastes Like Chicken: What's Fresh on Fleet Street | Cloud Que</title>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Special+Elite&family=Helvetica+Neue:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==================== 电影感黑市杂志风格 ==================== */
+        :root {
+            --bg-color: #000000; /* 纯黑底 */
+            --text-main: #b0b0b0; /* 昏暗灰 */
+            --accent-blood: #880000; /* 深血红 */
+            --accent-gaslight: #ffddaa; /* 煤气灯黄 */
+            --border-color: #1a1a1a; /* 极暗的边框 */
+            --font-title: 'IM Fell English SC', serif;
+            --font-body: 'Helvetica Neue', Helvetica, sans-serif;
+            --font-glitch: 'Special Elite', monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            position: relative;
+            z-index: 2; /* 在遮罩下面，但高于背景 */
+        }
+
+        /* 顶部返回导航 */
+        .back-nav {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+        .back-nav a {
+            color: var(--accent-blood);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+        .back-nav a:hover {
+            color: var(--text-main);
+        }
+
+        /* 杂志风电影感 Hero 区域 */
+        .tlc-hero {
+            text-align: center;
+            border: 4px solid var(--accent-blood);
+            padding: 40px;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        .tlc-hero::before { /* 模拟生锈铁框效果 */
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: 1px solid #300;
+            opacity: 0.5;
+        }
+
+        .tlc-hero h1 {
+            font-family: var(--font-title);
+            font-size: 4rem;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(136,0,0,0.8);
+        }
+        .tlc-hero p {
+            font-family: var(--font-glitch);
+            color: var(--accent-gaslight);
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        /* 杂志排风格通用 Section */
+        .section-box {
+            border: 1px solid var(--border-color);
+            background-color: #050505;
+            padding: 50px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: 2.2rem;
+            color: var(--accent-blood);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent-blood);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section-box p {
+            font-size: 1.1rem;
+            color: #999;
+            font-weight: 300;
+        }
+
+        /* 强调文字 */
+        .highlight-flesh { color: var(--accent-blood); font-weight: 700; }
+        .highlight-reputation { color: var(--accent-gaslight); font-weight: 700; }
+
+        /* 图片拼贴区域 (参考杂志风) */
+        .media-collage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .collage-item {
+            border: 2px solid #222;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .collage-item:hover {
+            transform: scale(1.02) rotate(1deg); /* 悬停时微微浮动 */
+        }
+        .collage-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: contrast(110%) grayscale(50%) sepia(20%); /* 恐怖滤镜 */
+        }
+
+        /* 【互动 2】Game Loop 配料收集互动 */
+        .game-loop {
+            margin-top: 50px;
+            border-top: 2px dashed #333;
+            padding-top: 40px;
+        }
+        .game-loop h3 {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .ingredient-collect {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .ingredient-btn {
+            background: none;
+            border: 2px solid var(--accent-blood);
+            color: var(--accent-blood);
+            font-family: var(--font-glitch);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .ingredient-btn:hover {
+            background-color: var(--accent-blood);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(136,0,0,0.6);
+        }
+        
+        /* 收集后淡出动画代码在 script 里通过样式添加 */
+        
+        .copyright {
+            text-align: center;
+            margin-top: 100px;
+            color: #333;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            font-family: var(--font-glitch);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="flashlight-mask"></div>
+
+    <div class="page-container">
+        
+        <div class="back-nav">
+            <a href="index.html#projects">← Back to Portfolio</a>
+        </div>
+
+        <header class="tlc-hero">
+            <h1>Tastes Like Chicken</h1>
+            <p>What's Fresh On Fleet Street.</p>
+        </header>
+
+        <section class="section-box">
+            <h2 class="section-title">The Hustle on Fleet Street</h2>
+            <p>Step into a dark, competitive 2D platformer brawler where characters attempt to become the <span class="highlight-reputation">'freshest on Fleet Street'</span>. The streets are chaotic, the competition is cutthroat, and the meat pies... well, let's just say they're made from the freshest <span class="highlight-flesh">Flesh</span> available.</p>
+        </div>
+
+        <section class="section-box">
+            <h2 class="section-title">The Game Loop</h2>
+            <p>Fight, cook, and sell. Master the three steps of the dark market pie trade to win.</p>
+            
+            <div class="game-loop">
+                <h3>1. Chop: Collect Ingredients</h3>
+                <p>Engage in fast-paced platforming combat. Use slides, dodges, and punches to extract <span class="highlight-flesh">Flesh</span> from enemies and rivals, or seek out secret <span class="highlight-reputation">Spices</span> scattered across the platforms.</p>
+                
+                <div class="ingredient-collect">
+                    <button class="ingredient-btn" data-ingredient="flesh">Chop [Flesh]</button>
+                    <button class="ingredient-btn" data-ingredient="spice">Find [Spices]</button>
+                    <button class="ingredient-btn" data-ingredient="mystery">Hunt [Unknown?]</button>
+                </div>
+
+                <h3>2. Cook: Assemble the Pie</h3>
+                <p>Combine your ingredients into a valid recipe. The quality of your components determines the potential of your final creation.</p>
+                
+                <h3>3. Consume: Slam and Sell</h3>
+                <p>Race across the map and slam the service bell to sell your pie. Throw your finished creation at the NPC tasters to gain <span class="highlight-reputation">Reputation</span>. The vendor with the freshest reputation wins.</p>
+            </div>
+        </div>
+
+        <section class="section-box">
+            <h2 class="section-title">Visual Development</h2>
+            <p>Gritty, industrial, and slightly macabre. These editor screenshots show the initial visual direction, blending 2D brawling mechanics with an atmospheric Victorian-esque London backdrop.</p>
+            
+            <div class="media-collage">
+                <div class="collage-item">
+                    <img src="1.jpeg" alt="Level Prototype in Unity Editor">
+                </div>
+                <div class="collage-item">
+                    <img src="2.jpeg" alt="Character and Enemy Blocks in Unity Editor">
+                </div>
+                <div class="collage-item">
+                    <img src="3.jpeg" alt="Platforming and Collision Setup">
+                </div>
+                <div class="collage-item">
+                    <img src="4.jpeg" alt="Prototype in Action">
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            GROUP 3: Cloud Que | Rochester, NY
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mask = document.getElementById('flashlight-mask');
+            const ingredientBtns = document.querySelectorAll('.ingredient-btn');
+            
+            // 【互动 1】：手电筒黑雾跟随
+            document.body.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                
+                mask.style.background = `radial-gradient(
+                    circle 15vmax at ${mouseX}px ${mouseY}px,
+                    rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,0.6) 50%,
+                    rgba(0,0,0,0.98) 100%
+                )`;
+            });
+
+            // 【互动 2】：配料收集点击动画
+            ingredientBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const ingredient = btn.dataset.ingredient;
+                    
+                    // 添加一个简单的淡出并缩小的动画样式
+                    btn.style.transition = 'all 0.5s ease-out';
+                    btn.style.opacity = '0';
+                    btn.style.transform = 'scale(0.8)';
+                    btn.innerText = `[${ingredient.toUpperCase()} COLLECTED]`;
+                    
+                    // 0.5秒后按钮消失，并在控制台打印
+                    setTimeout(() => {
+                        btn.style.visibility = 'hidden';
+                        console.log(`${ingredient} harvested!`);
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

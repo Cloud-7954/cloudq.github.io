@@ -1,0 +1,97 @@
+/* 极简、自然、微暗黑风格 */
+:root {
+    --bg-color: #0d0d0d; /* 非常深的深空灰，比纯黑自然 */
+    --text-main: #e0e0e0; /* 柔和的灰白，不刺眼 */
+    --text-muted: #666666; 
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* 居中首屏 */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 顶部居中导航 */
+.top-nav-centered {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    gap: 40px; /* 链接之间的间距 */
+}
+
+.top-nav-centered a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.top-nav-centered a:hover {
+    color: var(--text-main);
+}
+
+/* 居中大标题 */
+.hero-center-content {
+    text-align: center;
+}
+
+.hero-center-content h1 {
+    font-size: 4rem;
+    font-weight: 300; /* 使用细体字，更显高级自然 */
+    letter-spacing: 4px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.hero-center-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* About 区域排版 */
+.about-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container-centered {
+    max-width: 600px; /* 控制文本宽度，阅读更舒适 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-portrait-small {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* 把照片变成圆形，显得更自然亲和 */
+    object-fit: cover;
+    opacity: 0.8;
+    filter: grayscale(50%);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    font-weight: 300;
+}
