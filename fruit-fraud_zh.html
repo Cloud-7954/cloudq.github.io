@@ -228,6 +228,34 @@
             text-transform: uppercase;
         }
 
+        /* PDF 文档下载按钮 */
+        .doc-download-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .doc-btn {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+            padding: 15px 40px;
+            border: 4px solid var(--text-dark);
+            box-shadow: 8px 8px 0px var(--text-dark);
+            transform: rotate(-1.5deg);
+            transition: all 0.2s;
+            letter-spacing: 1px;
+        }
+
+        .doc-btn:hover {
+            transform: translate(-3px, -3px) rotate(0deg);
+            box-shadow: 12px 12px 0px var(--text-dark);
+            background-color: var(--accent-yellow);
+        }
+
         .wip-stamp {
             color: var(--accent-red);
             border: 4px solid var(--accent-red);
@@ -278,7 +306,7 @@
                     <div style="text-align: center; font-weight: bold; margin-top: 10px; font-family: 'Permanent Marker', cursive;">TTS 试玩原型</div>
                 </div>
                 <div class="polaroid img2">
-                    <img src="image2.png" alt="卡背">
+                    <img src="CardBack.png" alt="卡背">
                     <div style="text-align: center; font-weight: bold; margin-top: 10px; font-family: 'Permanent Marker', cursive;">卡背艺术设计</div>
                 </div>
             </div>
@@ -309,6 +337,12 @@
             </div>
         </div>
 
+        <div class="doc-download-container">
+            <a href="Group 3 - Fruit Fraud - Design Document.pdf" target="_blank" class="doc-btn">
+                📄 最新版 DESIGN DOC (PDF)
+            </a>
+        </div>
+
         <div class="status-footer">
             <div>
                 <div>游戏设计团队 3：</div>
@@ -318,6 +352,7 @@
                 <div class="wip-stamp">机密：开发中原型</div>
             </div>
         </div>
+        
 
     </div>
 

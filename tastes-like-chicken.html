@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tastes Like Chicken: What's Fresh on Fleet Street | Cloud Que</title>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Special+Elite&family=Helvetica+Neue:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     
     <style>
         /* ==================== 电影感黑市杂志风格 ==================== */
@@ -127,7 +128,7 @@
         }
 
         .collage-item {
-            border: 2px solid #222;
+            border: none; /* 把边框去掉 */
             overflow: hidden;
             position: relative;
             transition: transform 0.3s ease;
@@ -181,8 +182,6 @@
             box-shadow: 0 0 10px rgba(136,0,0,0.6);
         }
         
-        /* 收集后淡出动画代码在 script 里通过样式添加 */
-        
         .copyright {
             text-align: center;
             margin-top: 100px;
@@ -195,6 +194,8 @@
     </style>
 </head>
 <body>
+
+    <a href="tastes-like-chicken_zh.html" class="lang-toggle" style="position: absolute; top: 40px; right: 50px; color: #fff; text-decoration: none; font-size: 0.85rem; padding: 6px 16px; border: 1px solid #555; border-radius: 20px; z-index: 1000;">EN / 中</a>
 
     <div id="flashlight-mask"></div>
 
@@ -211,7 +212,7 @@
 
         <section class="section-box">
             <h2 class="section-title">The Hustle on Fleet Street</h2>
-            <p>Step into a dark, competitive 2D platformer brawler where characters attempt to become the <span class="highlight-reputation">'freshest on Fleet Street'</span>. The streets are chaotic, the competition is cutthroat, and the meat pies... well, let's just say they're made from the freshest <span class="highlight-flesh">Flesh</span> available.</p>
+            <p>Step into this dark, deceptive text-based narrative game where characters compete to become the <span class="highlight-reputation">'freshest on Fleet Street'</span>. The streets are chaotic, the competition is cutthroat, and the meat pies... well, let's just say they're made from the freshest <span class="highlight-flesh">Flesh</span> available.</p>
         </div>
 
         <section class="section-box">
@@ -220,7 +221,7 @@
             
             <div class="game-loop">
                 <h3>1. Chop: Collect Ingredients</h3>
-                <p>Engage in fast-paced platforming combat. Use slides, dodges, and punches to extract <span class="highlight-flesh">Flesh</span> from enemies and rivals, or seek out secret <span class="highlight-reputation">Spices</span> scattered across the platforms.</p>
+                <p>Engage in fast-paced greeting, selecting, and murdering at the barbershop to extract <span class="highlight-flesh">Flesh</span> from customers, or seek out secret <span class="highlight-reputation">Spices</span> scattered across the platforms.</p>
                 
                 <div class="ingredient-collect">
                     <button class="ingredient-btn" data-ingredient="flesh">Chop [Flesh]</button>
@@ -229,26 +230,26 @@
                 </div>
 
                 <h3>2. Cook: Assemble the Pie</h3>
-                <p>Combine your ingredients into a valid recipe. The quality of your components determines the potential of your final creation.</p>
+                <p>Head to your secret base to combine your ingredients into a valid recipe. The quality of your materials determines the potential of your final creation.</p>
                 
                 <h3>3. Consume: Slam and Sell</h3>
-                <p>Race across the map and slam the service bell to sell your pie. Throw your finished creation at the NPC tasters to gain <span class="highlight-reputation">Reputation</span>. The vendor with the freshest reputation wins.</p>
+                <p>Go to your shop to sell your pies. Throw your finished creation at the NPC tasters to gain <span class="highlight-reputation">Reputation</span>. The vendor with the freshest reputation wins.</p>
             </div>
         </div>
 
         <section class="section-box">
             <h2 class="section-title">Visual Development</h2>
-            <p>Gritty, industrial, and slightly macabre. These editor screenshots show the initial visual direction, blending 2D brawling mechanics with an atmospheric Victorian-esque London backdrop.</p>
+            <p>Gritty, industrial, and slightly macabre. These editor screenshots show the initial visual direction, blending 2D text with an atmospheric Victorian-esque London backdrop.</p>
             
             <div class="media-collage">
                 <div class="collage-item">
                     <img src="1.jpeg" alt="Level Prototype in Unity Editor">
                 </div>
                 <div class="collage-item">
-                    <img src="2.jpeg" alt="Character and Enemy Blocks in Unity Editor">
+                    <img src="2.jpeg" alt="">
                 </div>
                 <div class="collage-item">
-                    <img src="3.jpeg" alt="Platforming and Collision Setup">
+                    <img src="3.jpeg" alt="">
                 </div>
                 <div class="collage-item">
                     <img src="4.jpeg" alt="Prototype in Action">
@@ -257,7 +258,7 @@
         </div>
         
         <div class="copyright">
-            GROUP 3: Cloud Que | Rochester, NY
+            Cloud Que | Rochester, NY
         </div>
     </div>
 
