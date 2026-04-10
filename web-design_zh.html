@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页设计项目 | Cloud Que</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 专门为这个列表页增加的额外样式 */
+        .page-container {
+            padding-top: 100px; /* 给顶部导航留出空间 */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-list {
+            width: 100%;
+            max-width: 800px; /* 控制列表宽度，显得精致 */
+            margin-top: 60px;
+        }
+
+        .project-item {
+            border-bottom: 1px solid #222; /* 极简分割线 */
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateX(10px); /* 鼠标悬停时整个项目微微向右移 */
+        }
+
+        .project-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .project-info p {
+            margin: 0;
+            color: var(--text-muted); /* 使用了 style.css 里的变量 */
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .project-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid #444;
+            padding: 10px 24px;
+            border-radius: 30px; /* 圆角按钮，柔和自然 */
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="web-design.html" class="lang-toggle">EN / 中</a>
+
+    <nav class="top-nav-centered" style="position: absolute; top: 50px; width: 100%; display: flex; justify-content: center;">
+        <a href="index_zh.html">返回首页</a>
+    </nav>
+
+    <div class="page-container">
+        <div class="hero-center-content" style="margin-top: 50px;">
+            <h1 style="font-size: 3rem;">网页设计</h1>
+            <p>UI/UX 与前端开发</p>
+        </div>
+
+        <div class="project-list">
+            
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>游戏介绍页</h2>
+                    <p>响应式单页宣传网站，介绍独立恐怖游戏 <em>Fran Bow</em> 的故事与角色。</p>
+                </div>
+                <a href="./project1/index.html" target="_blank" class="project-link">查看项目</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>个人主页排版</h2>
+                    <p>HTML & CSS 结构设计探索。</p>
+                </div>
+                <a href="./Cloud's235Page/" target="_blank" class="project-link">查看项目</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>交互式游戏界面</h2>
+                    <p>针对游戏概念的基于 Web 的界面设计。</p>
+                </div>
+                <a href="./game/index.html" target="_blank" class="project-link">查看项目</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>俄罗斯方块 CSS Grid</h2>
+                    <p>使用 CSS Grid 的高级网格布局技术。</p>
+                </div>
+                <a href="./tetris-grid-finished/tetris-grid.html" target="_blank" class="project-link">查看项目</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>随机短语生成器</h2>
+                    <p>JavaScript 逻辑与 DOM 操作。</p>
+                </div>
+                <a href="./RandomPhrases/random-phrases.html" target="_blank" class="project-link">查看项目</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

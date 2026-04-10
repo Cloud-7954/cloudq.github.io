@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏与原型 | Cloud Que</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-container { padding-top: 100px; display: flex; flex-direction: column; align-items: center; }
+        .project-list { width: 100%; max-width: 800px; margin-top: 40px; }
+        
+        /* 标题样式：调大了字体 (1rem -> 1.25rem) */
+        .category-title {
+            width: 100%;
+            max-width: 800px;
+            margin: 60px 0 20px 0;
+            font-size: 1.25rem; 
+            color: #555;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .project-item {
+            border-bottom: 1px solid #1a1a1a;
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-info h2 { margin: 0; font-size: 1.6rem; font-weight: 300; color: #fff; }
+        .project-info p { margin: 5px 0 0 0; color: #666; font-size: 0.9rem; }
+        
+        .project-link {
+            color: #fff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;
+            border: 1px solid #333; padding: 8px 20px; border-radius: 20px; transition: all 0.3s;
+        }
+        .project-link:hover { background: #fff; color: #000; }
+
+        /* 正在开发项目的特殊样式 */
+        .wip-badge {
+            font-size: 0.7rem; background: #222; color: #888;
+            padding: 2px 8px; border-radius: 4px; margin-left: 10px; vertical-align: middle;
+        }
+        .placeholder-box {
+            width: 100%; height: 200px; background: #111; border: 1px dashed #333;
+            display: flex; justify-content: center; align-items: center;
+            color: #444; margin-top: 15px; font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="unity-projects.html" class="lang-toggle">EN / 中</a>
+
+    <nav class="top-nav-centered" style="position: absolute; top: 50px; width: 100%; display: flex; justify-content: center;">
+        <a href="index_zh.html">返回首页</a>
+    </nav>
+
+    <div class="page-container">
+        <div class="hero-center-content">
+            <h1>游戏开发</h1>
+            <p>数字与实体游戏体验</p>
+        </div>
+
+        <div class="category-title" style="margin-top: 80px; color: #00ffff;">大型项目 (Major Projects)</div>
+        <div class="project-list">
+            
+            <div class="project-item">
+                <div class="project-info">
+                    <h2 style="color: #00ffff; font-weight: 700; font-size: 1.4rem;">项目：Vacated</h2>
+                    <p>发布于 Itch.io 的氛围感独立游戏。体验沉浸式的环境和令人紧张的玩法机制。</p>
+                </div>
+                <a href="https://cloudque.itch.io/vacated" target="_blank" class="project-link" style="border-color: #00ffff; color: #00ffff;">在 Itch.io 上游玩</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2 style="color: #00ffff; font-weight: 700; font-size: 1.4rem;">项目：Tastes Like Chicken</h2>
+                    <p>背景设定在混乱的舰队街（Fleet Street）的黑暗竞技类 2D 平台乱斗游戏。快速切碎食材、烹饪骇人的肉饼，并敲击铃铛售卖你的作品，以获得“最新鲜”的声誉。</p>
+                </div>
+                <a href="./tastes-like-chicken_zh.html" target="_blank" class="project-link" style="border-color: #00ffff; color: #00ffff;">查看案例研究</a>
+            </div>
+
+        </div>
+
+        <div class="category-title" style="margin-top: 80px;">开发中与实体桌面游戏</div>
+        <div class="project-list">
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>Fruit Fraud (实体桌游)</h2>
+                    <p>一款融合了实时套牌收集与社交推理的快节奏派对游戏。玩家在一个混乱的午夜黑市中，通过快速传递、心理博弈和拼手速敲铃，来收集相同的水果卡牌。</p>
+                </div>
+                <a href="fruit-fraud_zh.html" target="_blank" class="project-link">查看详情</a>
+            </div>
+
+        </div>
+
+        
+
+        <div class="category-title">可运行演示 (Playable Builds)</div>
+        <div class="project-list">
+            
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>项目 01：动态弹珠台 (Dynamic Plinko)</h2>
+                    <p>完整的 2D 物理游戏，包含自定义的 3 轮游戏循环和动态水桶倍率系统。设计了四种不同的交互式障碍钉机制，以及严格的生成限制、UI 分数追踪和出界保护机制。</p>
+                </div>
+                <a href="./Project_01/index.html" target="_blank" class="project-link" style="border-color: #00ffff; color: #00ffff;">启动项目</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>项目 02：水果忍者 (Fruit Ninja)</h2>
+                    <p>2D 物理街机游戏，利用连续射线检测进行滑动碰撞判定，并带有动态波次生成系统。包含自定义连击计分系统、随机轨迹受力、视觉滑动轨迹以及完整的游戏生命周期管理。</p>
+                </div>
+                <a href="./Project_02/index.html" target="_blank" class="project-link" style="border-color: #00ffff; color: #00ffff;">启动项目</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>雪人场景 (Snowman Scene)</h2>
+                    <p>组件、预制体及基础的 WebGL 导出。</p>
+                </div>
+                <a href="./Exercise_01/index.html" target="_blank" class="project-link">启动</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>循环球 (Looping Ball)</h2>
+                    <p>摄像机跟随、动态生成及基于触发器的物体销毁。</p>
+                </div>
+                <a href="./Exercise_02/index.html" target="_blank" class="project-link">启动</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>鼠标输入 (Mouse Input)</h2>
+                    <p>屏幕到世界坐标的转换及使用 Atan2 三角函数进行旋转。</p>
+                </div>
+                <a href="./Exercise_03/index.html" target="_blank" class="project-link">启动</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>随机算法 (Random Algorithms)</h2>
+                    <p>权重随机算法、拖拽距离追踪以及 List 集合管理。</p>
+                </div>
+                <a href="./Exercise_04/index.html" target="_blank" class="project-link">启动</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>跳跃球 (Leaping Ball)</h2>
+                    <p>方向向量计算及通过鼠标输入施加 Rigidbody2D 物理受力。</p>
+                </div>
+                <a href="./Exercise_05/index.html" target="_blank" class="project-link">启动</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>滑动碰撞 (Swipe Intersection)</h2>
+                    <p>连续鼠标滑动碰撞检测机制的研发与实现。</p>
+                </div>
+                <a href="./Exercise_06/index.html" target="_blank" class="project-link">启动</a>
+            </div>
+
+        </div>
+
+        
+        
+        <div style="margin-top: 100px; color: #333; font-size: 0.8rem; padding-bottom: 50px;">
+            © 2026 Cloud Que | 纽约州罗切斯特
+        </div>
+    </div>
+
+</body>
+</html>
